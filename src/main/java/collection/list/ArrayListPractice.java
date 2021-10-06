@@ -14,9 +14,14 @@ public class ArrayListPractice {
         List<String> arrayList1 = new ArrayList<String>();
         arrayList1.add("1");
         arrayList1.add("2");
-        for (String s : arrayList1) {
-            if("1".equals(s)){
-                arrayList1.remove(s);
+        SOUT: for (String s : arrayList1) {
+            System.out.println("s = " + s);
+            for (String s1 : arrayList1) {
+                System.out.println("s1 = " + s);
+                if ("1".equals(s1)) {
+                    System.out.println("11111");
+                    break SOUT;
+                }
             }
         }
 //        List<String> arrayList2 = new ArrayList<String>();
